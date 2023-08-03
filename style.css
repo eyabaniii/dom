@@ -1,0 +1,356 @@
+/*GLOBALCSS*/
+* {font-family: 'Luckiest Guy', cursive;
+  font-style: oblique;
+
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background-image: url(./back.jpeg);
+    backface-visibility: hidden;
+    transform: perspective(1000px)  ;
+
+    background-position: bottom;
+    background-size: 100%;
+    animation: maz 30s infinite alternate;
+    overflow: hidden;
+
+}
+
+@keyframes maz{
+    0%{
+        background-position: bottom;
+    }
+    100%{
+        background-position: top;
+    }
+}
+:root {
+  --pink: #ff1493;
+  --orange: #ff5f1f;
+  --beige: #bbaa88;
+  --brown: #333333;
+  --creamy: #a99473;
+  --cover:#faf3e8;
+}
+/*CSS CARD*/
+.card, .price {
+  position: relative;
+  background: greenyellow;
+  width: 100%;
+  height: 50vh;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  overflow: visible;
+  box-shadow: -2px 2px 20px 1px #7BF3FC;
+}
+.card{
+  height: 30vh;
+}
+.sl{
+
+  font-family: 'Comic Sans MS', cursive;
+  position: absolute;
+  top: 5rem;
+  right: -0.5rem;
+  z-index: 99999;
+
+
+  margin: auto;
+font-size: 1rem;
+  width: 25%;
+  border: dashed 10px #7BF3FC ;
+  padding: 0.7rem;
+  backdrop-filter:blur(30px);
+  font-weight: 600;
+  color: var(--pink);
+  transform: rotate(30deg);
+}
+nav{
+  width: 100%;
+  height: 100%;
+ background-color: #faf3e8d2;
+      padding:1rem 2rem ;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+}
+img {
+  width: 100%;
+  height: 13vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: scaleX(0.5);
+}
+
+ul{
+     display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+gap: 25px;
+}
+ul li{
+list-style: none;   
+color: var(--orange);
+font-size: 1.1rem;
+}
+.show{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  padding: 10rem 12rem;
+
+}
+.pr{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 15vw;
+  height: 5vh;
+  margin: auto;
+  padding-top: 5rem;
+}
+
+
+
+.prix{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.product {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 80%;
+  height: 80%;
+  background-color: var(--cover);
+  z-index: 1;
+}
+.count{
+  color: var(--beige);
+}
+.ch{
+  color: #7BF3FC;
+}
+
+
+.show .shine {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 465px;
+  overflow: hidden;
+}
+
+
+ .show .shine-effect {
+  position: absolute;
+  top: -15%;
+  left: 150%;
+  width: 25px;
+  height: 400px;
+  background-color: var(--pink);
+  box-shadow: 0 0 15px 20px var(--pink);
+  transform: rotate(25deg);
+  transition: all 1s cubic-bezier(0.78, 0.02, 0.5, 0.77);
+  z-index: 5;
+}
+.pr .shine {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+
+ .pr .shine-effect {
+  position: absolute;
+  top: -15%;
+  left: 150%;
+  width: 25px;
+  height: 150px;
+  background-color: var(--pink);
+  box-shadow: 0 0 15px 20px var(--pink);
+  transform: rotate(25deg);
+  transition: all 1s cubic-bezier(0.78, 0.02, 0.5, 0.77);
+  z-index: 5;
+}
+.pattern-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: auto;
+  z-index: 2;
+}
+.imgbox {
+  width: 100%;
+  height: 100%;
+
+}
+.pattern-2 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 200px;
+  height: auto;
+  z-index: 2;
+}
+
+.ice > svg {
+  position: absolute;
+  bottom: 3%;
+  right: 0;
+  fill: var(--pink);
+
+  transform-origin: 100% 0;
+  transform: rotate(-20deg);
+  z-index: 300;
+}
+
+.tape-1 {
+  position: absolute;
+  top: -20%;
+  left: 2%;
+  width: 15%;
+  height: 15%;
+
+  z-index: 6;
+}
+
+.tape-2 {
+  position: absolute;
+  top: -25%;
+  right: 2%;
+  width: 15%;
+  height: 15%;
+
+  z-index: 6;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card:hover .tape-1 {
+  transform: scale(1);
+}
+
+.card:hover .tape-2 {
+  transform: scale(1);
+}
+
+.card:hover .shine-effect {
+  left: -100%;
+}
+
+
+.fil-tape-10 {
+  fill: var(--creamy);
+}
+
+.fil-tape-11 {
+  fill: #7BF3FC;
+  fill-rule: nonzero;
+}
+
+.fil-tape-20 {
+  fill: var(--creamy);
+}
+
+.fil-tape-21 {
+  fill: #7BF3FC;
+  fill-rule: nonzero;
+}
+
+.fil-pattern-1 {
+  fill: var(--pink);
+}
+
+.fil-pattern-2 {
+  fill: #7BF3FC;
+  fill-rule: nonzero;
+}
+
+.fil0 {
+  fill: #7BF3FC;
+}
+
+h3,
+p {
+  font-size: 1rem;
+ margin: 0;
+  text-align: center;
+  color: var(--orange);
+}
+
+
+
+.p2 svg {
+
+  fill: var(--beige);
+}
+#tt{
+  display: flex;
+  justify-content: center;
+flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+}
+h1{
+  font-family: 'Luckiest Guy', cursive;
+
+  color: rgb(255,20,147);
+  margin: 0;
+  font-size: 2.5rem;
+
+}
+#pt{
+  text-align: center;  display: flex;
+  justify-content: center;
+flex-direction: column;
+  align-items: center;
+ 
+ 
+}
+#pt>p{
+  color: #7BF3FC;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.p1,
+.p2 {
+  display: flex;
+  justify-content: center;
+  padding:6px;
+  align-items: center;
+  gap: 20px;
+}
+button {
+  font-size: 1.2em;
+  background-color: transparent;
+  color: var(--orange);
+  border: none;
+
+ 
+}
+.p1 button{color: #7BF3FC;
+font-weight: 900;
+font-size: 1.5em;
+}
